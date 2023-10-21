@@ -17,7 +17,7 @@ export default function Navbar() {
                                Calculate BMR
                             </Link>
                             
-                            <Link className="nav-item" to="/profile">
+                            <Link className="nav-item" to="/news">
                                 Food News
                             </Link>
                            
@@ -73,12 +73,12 @@ export default function Navbar() {
                     <Link className="nav-item fw-bold mb-3 mt-3 text-center" to="/">
                         Home
                     </Link>
-                    <Link
+                    {/* <Link
                         className="nav-item fw-bold text-decoration-none mb-3 text-center"
                         to="/add-recipe"
                     >
                         Add Recipe
-                    </Link>
+                    </Link> */}
                     <Link
                         className="nav-item fw-bold text-decoration-none mb-3 text-center"
                         to="/profile"
