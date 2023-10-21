@@ -13,6 +13,7 @@ import axios from "axios";
 
 import { store } from "./store";
 import { Provider } from "react-redux";
+import Target from "./pages/Target";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/BMR",
     element: <BMR />,
+  },
+  {
+    path: "/target",
+    element: <Target />,
   }
 ]);
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import "../styles/Home.css";
+import { useState } from 'react';
 // import component
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -27,7 +28,30 @@ export default function Home() {
 
     }
 
-    
+
+    function handlesubmit(event) {
+        event.preventDefault();
+        navigate("/target");
+    }
+
+    const [calories, setCalories] = useState('');
+    const [meals, setMeals] = useState([]);
+    const fetchMeals = async () => {
+        try {
+            const response = await axios.get(
+                `https://api.spoonacular.com/recipes/findByNutrients?apiKey=2f570a74f5234f65a8633fcbd019c909&maxCalories=${calories}`
+            );
+            setMeals(response.data);
+        } catch (error) {
+            console.error('Error fetching meals:', error);
+        }
+    };
+
+    const handleCaloriesChange = (e) => {
+        setCalories(e.target.value);
+    };
+
+
     return (
         <>
             <Navbar />
@@ -45,19 +69,18 @@ export default function Home() {
                         </p>
                         <a className="hero-nav" href='./BMR'>First check BMR from here..</a>
                         <div className="search-input mt-4 w-50">
-                            <input
-                                className="form-control form-control-lg"
-                                style={{ background: "#EFEFEF", borderRadius: 15 }}
-                                placeholder="Search by Calories, Recipe or Enter BMR"
-                                onChange={(e) => setKeyword(e.target.value)}
-                                onKeyDown={(e) => {
-                                    if (e.keyCode === 13) {
-                                        window.location.href = ("#popular-recipe");
-                                        handleSearch();
-                                    }
-                                }}
-                            />
-                            </div>
+                            
+                            <form onSubmit={handlesubmit}>
+                                
+                                <button
+                                
+                                    onClick={fetchMeals}
+                                    className="btn btn-primary"
+                                >
+                                    Find Meals
+                                </button>
+                            </form>
+                        </div>
                     </div>
                     <div className="col-md-auto" />
                     <div className="col-md-5 hero">

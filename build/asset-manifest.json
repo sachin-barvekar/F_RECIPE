@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.523afebe.css",
+    "main.js": "/static/js/main.01d7aad6.js",
+    "static/media/airbnbcereal.otf": "/static/media/airbnbcereal.81798c6cdace650a8c1a.otf",
+    "index.html": "/index.html",
+    "main.523afebe.css.map": "/static/css/main.523afebe.css.map",
+    "main.01d7aad6.js.map": "/static/js/main.01d7aad6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.523afebe.css",
+    "static/js/main.01d7aad6.js"
+  ]
+}
