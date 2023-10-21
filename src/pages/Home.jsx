@@ -23,10 +23,7 @@ export default function Home() {
             });
     }, []);
 
-    const handleSearch = () => {
-        navigate(`/search?keyword=${keyword}`);
-
-    }
+  
 
 
     function handlesubmit(event) {
@@ -63,11 +60,11 @@ export default function Home() {
                 >
                     <div className="hero-col col-md-7 col-xs-12 order-2 order-md-1 hero-left mb-5">
 
+                        <a className="hero-nav" href='./BMR'>First, Calculate BMR from here..</a>
                         <p className="hero-text">
                             Discover Recipe <br />
                             &amp; Delicious Food
                         </p>
-                        <a className="hero-nav" href='./BMR'>First check BMR from here..</a>
                         <div className="search-input mt-4 w-50">
                             
                             <form onSubmit={handlesubmit}>
@@ -75,7 +72,7 @@ export default function Home() {
                                 <button
                                 
                                     onClick={fetchMeals}
-                                    className="btn btn-primary"
+                                    className="btn btn-success"
                                 >
                                     Find Meals
                                 </button>
@@ -90,7 +87,7 @@ export default function Home() {
             </div>
             {/* end of header */}
             {/* start of popular for you */}
-            <section className="main-section-recipe popular-for-you">
+            {/* <section className="main-section-recipe popular-for-you">
                 <div className="container position-relative">
                     <div className="row">
                         <div className="col-md-3 popular-recipe-text-box">
@@ -114,7 +111,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            {/* end of popular for you */}
+            end of popular for you */}
             <section className="main-section-recipe">
                 <div className="container position-relative">
                     <div className="row mb-5">
