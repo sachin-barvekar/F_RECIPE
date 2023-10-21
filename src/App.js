@@ -6,9 +6,7 @@ import Detail from "./pages/Detail";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-import Search from "./pages/Search";
 import BMR from "./pages/BMR";
-import FoodNewsComponent from "./pages/News";
 import News from "./pages/News";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
@@ -38,10 +36,7 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile />,
   },
-  {
-    path: "/search",
-    element: <Search />,
-  },
+ 
   {
     path: "/BMR",
     element: <BMR />,

@@ -26,7 +26,8 @@ const Target = () => {
   };
 
   return (
-    <div>
+      <>
+      <Navbar />
       <div className="container mt-5">
     
       {/* <Sidebar></Sidebar> */}

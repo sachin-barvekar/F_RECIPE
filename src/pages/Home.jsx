@@ -87,31 +87,6 @@ export default function Home() {
             </div>
             {/* end of header */}
             {/* start of popular for you */}
-            {/* <section className="main-section-recipe popular-for-you">
-                <div className="container position-relative">
-                    <div className="row">
-                        <div className="col-md-3 popular-recipe-text-box">
-                            <h3>Popular For You !</h3>
-                        </div>
-                    </div>
-                    <div className="row align-items-center">
-                        <div className="col-md-6">
-                            <img src="/images/hero.avif" alt="Popular For You" />
-                        </div>
-                        <div className="col-md-5 align-self-center justify-content-between">
-                            <h4>Fruity Honey Toast</h4>
-                            <hr style={{ width: "10vh" }} />
-                            <p>
-                                A delightful blend of fresh fruits and sweet honey nestled between two slices of bread, creating a delectable and healthy Fruity Honey Sandwich!
-                            </p>
-                            <Link className="text-decoration-none" to={`/detail/fruity-honey-toast`}>
-                                <button className="btn">Learn More</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            end of popular for you */}
             <section className="main-section-recipe">
                 <div className="container position-relative">
                     <div className="row mb-5">
