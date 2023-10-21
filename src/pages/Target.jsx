@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import RecipeCard from "../components/RecipeCard";
 
 const Target = () => {
   const [calories, setCalories] = useState('');
@@ -24,8 +26,15 @@ const Target = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div>
+=======
+      <>
+      <Navbar />
+>>>>>>> 3d38b23cdf3af038ca33e08334ced570db7626e9
       <div className="container mt-5">
+    
+      {/* <Sidebar></Sidebar> */}
         <div className="card p-4">
           <h1 className="card-title h3">Meal Finder</h1>
           <div className="mb-3">
@@ -39,21 +48,36 @@ const Target = () => {
           </div>
           <button
             onClick={fetchMeals}
-            className="btn btn-primary"
+            className="btn btn-success"
+            style={{width: '150px'}}
           >
             Find Meals
           </button>
-          <ul className="list-group mt-4">
-            {meals.map((meal) => (
-              <li key={meal.id} className="list-group-item mb-3">
-                <h3 className="h5">{meal.title}</h3>
-                <p>Calories: {meal.calories}</p>
-              </li>
-            ))}
-          </ul>
         </div>
-      </div>
-    </div>
+        
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+        <section id="popular-recipe">
+                <div className="container">
+                    <h3 className="popular-recipe-title">The Meals are: </h3>
+                    <div className="row">
+                        {meals.map((meal) => (
+                            <RecipeCard
+                            image={meal.image}
+                            id={meal.id}
+                            title={meal.title}
+                            calories= {meal.calories}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+    <Footer />
+    </>
   );
 };
 
