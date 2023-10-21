@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import "../styles/news.css";
 
 const NewsAPIKey = '6c4a846fa8dd443f878361eacba102f4'; // Replace with your NewsAPI key
 
@@ -30,8 +33,14 @@ const News= () => {
   }, []);
 
   return (
+    <>
+    <Navbar />
     <div className="container mt-4">
-      <h2 className="mb-3">Trending Food News</h2>
+    <div className="row mb-5">
+      <div className="col-md-3 popular-recipe-text-box">
+          <h3>Trending Food News</h3>
+      </div>
+    </div>
       <div className="row">
         {news.map((article, index) => (
           <div key={index} className="col-md-4 mb-4">
@@ -40,7 +49,7 @@ const News= () => {
               <div className="card-body">
                 <h5 className="card-title">{article.title}</h5>
                 <p className="card-text">{article.description}</p>
-                <a href={article.url} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <a href={article.url} className="btn btn-success" target="_blank" rel="noopener noreferrer">
                   Read More
                 </a>
               </div>
@@ -49,6 +58,8 @@ const News= () => {
         ))}
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -26,12 +26,8 @@ const Target = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div>
-=======
       <>
       <Navbar />
->>>>>>> 3d38b23cdf3af038ca33e08334ced570db7626e9
       <div className="container mt-5">
     
       {/* <Sidebar></Sidebar> */}
